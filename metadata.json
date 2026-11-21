@@ -1,0 +1,6 @@
+{
+  "name": "GIETU Photo Lookup",
+  "description": "Instant GIETU student square photo lookup by roll number — Bhai Tu Dal, Nikalna Hamara Kam Hai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
