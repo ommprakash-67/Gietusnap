@@ -21,7 +21,7 @@ import {
   stepRollNumber,
 } from './utils/rollNumber';
 
-const DEFAULT_ROLL = '25CSE020';
+const DEFAULT_ROLL = '22CSE000';
 const HISTORY_STORAGE_KEY = 'gietu_snap_recent_rolls_v1';
 const ERP_SESSION_STORAGE_KEY = 'gietu_snap_erp_session_v1';
 const BATCH_AUTH_STORAGE_KEY = 'gietu_snap_batch_auth_v1';
@@ -257,7 +257,7 @@ export default function App() {
   const commitRollLookup = useCallback((rawRoll: string) => {
     const normalized = normalizeRollNumber(rawRoll);
     if (!normalized) {
-      setInputError('Please enter a valid roll number, e.g. 25CSE020.');
+      setInputError('Please enter a valid roll number, e.g. 22CSE000.');
       return;
     }
 
@@ -275,7 +275,7 @@ export default function App() {
     commitRollLookup(inputValue);
   };
 
-  // Auto-fetch as soon as a complete roll number (e.g. 25CSE020) is entered
+  // Auto-fetch as soon as a complete roll number (e.g. 22CSE000) is entered
   useEffect(() => {
     const normalized = normalizeRollNumber(inputValue);
     if (!normalized || normalized === activeRoll) return;
@@ -468,7 +468,7 @@ export default function App() {
                         setInputValue(e.target.value.toUpperCase());
                         if (inputError) setInputError(null);
                       }}
-                      placeholder="Enter roll number (e.g. 25CSE020)"
+                      placeholder="Enter roll number (e.g. 25CSE000)"
                       aria-label="Student roll number"
                       autoComplete="off"
                       spellCheck={false}
